@@ -1,12 +1,12 @@
-:root{
+:root {
   /* pRIMARY */
---bright-orange: hsl(31, 77%, 52%)
---dark-cyan: hsl(184, 100%, 22%)
---very-dark -yan: hsl(179, 100%, 13%)
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
 
-/* Neutral */
---transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75)
---very-light-gray: hsl(0, 0%, 95%)
+  /* Neutral */
+  --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
 }
 
 body,
@@ -14,8 +14,6 @@ html {
   display: grid;
   place-items: center;
   min-height: 100vh;
-
- 
 }
 main {
   display: grid;
@@ -25,13 +23,15 @@ main {
 main > div {
   display: flex;
   flex-direction: column;
+  padding: 2rem;
+  color: var(--transparent-white-paragraphs);
 }
 .sedans {
-  background-color: orangered;
+  background-color: var(--bright-orange);
 }
 .suvs {
-  background-color: aqua;
+  background-color: var(--dark-cyan);
 }
 .luxury {
-  background-color: aquamarine;
+  background-color: var(--very-dark-cyan);
 }
