@@ -1,5 +1,25 @@
-body {
+body,
+html {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 900px;
+}
+main > div {
+  display: flex;
+  flex-direction: column;
+}
+.sedans {
+  background-color: orangered;
+}
+.suvs {
+  background-color: aqua;
+}
+.luxury {
+  background-color: aquamarine;
 }
