@@ -14,17 +14,25 @@ html {
   display: grid;
   place-items: center;
   min-height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
 }
 main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 600px;
+  width: 700px;
 }
 main > div {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 16px 32px;
   color: var(--transparent-white-paragraphs);
+}
+main > div h2 {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 2rem;
 }
 .sedans {
   background-color: var(--bright-orange);
