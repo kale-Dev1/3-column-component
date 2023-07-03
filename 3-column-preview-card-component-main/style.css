@@ -20,12 +20,12 @@ html {
 main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 700px;
+  width: 600px;
 }
 main > div {
   display: flex;
   flex-direction: column;
-  padding: 16px 32px;
+  padding: 0 32px;
   color: var(--transparent-white-paragraphs);
 }
 main > div h2 {
@@ -33,13 +33,27 @@ main > div h2 {
   font-family: "Big Shoulders Display", cursive;
   font-weight: 700;
   font-size: 2rem;
+  color: var(--very-light-gray);
+}
+main > div img {
+  width: 70px;
+  height: 45px;
+  padding-top: 25px;
 }
 .sedans {
   background-color: var(--bright-orange);
+  color: var(--bright-orange);
 }
 .suvs {
   background-color: var(--dark-cyan);
+  color: var(--dark-cyan);
 }
 .luxury {
   background-color: var(--very-dark-cyan);
+  color: var(--very-dark-cyan);
+}
+.button {
+  padding: 16px 32px;
+  background-color: white;
+  color: inherit;
 }
