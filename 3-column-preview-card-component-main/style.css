@@ -13,21 +13,26 @@ body,
 html {
   display: grid;
   place-items: center;
-  min-height: 100vh;
+  min-height: 100%;
   font-family: "Lexend Deca", sans-serif;
-  font-size: 15px;
+  font-size: clamp(15px, 50%, 20px);
 }
 main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 600px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 90%;
 }
 main > div {
   display: flex;
   flex-direction: column;
-  padding: 0 32px;
-  color: var(--transparent-white-paragraphs);
+  padding: 16px max(50px, 32px);
 }
+main > div p {
+  color: var(--transparent-white-paragraphs);
+  line-height: 1.6;
+  letter-spacing: 2;
+}
+
 main > div h2 {
   text-transform: uppercase;
   font-family: "Big Shoulders Display", cursive;
@@ -35,6 +40,7 @@ main > div h2 {
   font-size: 2rem;
   color: var(--very-light-gray);
 }
+
 main > div img {
   width: 70px;
   height: 45px;
@@ -53,7 +59,43 @@ main > div img {
   color: var(--very-dark-cyan);
 }
 .button {
-  padding: 16px 32px;
-  background-color: white;
+  padding: 13px 25px;
+  background-color: var(--transparent-white-paragraphs);
   color: inherit;
+  box-sizing: border-box;
+  width: fit-content;
+  border-radius: 50px;
+  margin: 50px 0 32px 0;
+  border: 2px solid var(--transparent-white-paragraphs);
+}
+.button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--transparent-white-paragraphs);
+  color: var(--transparent-white-paragraphs);
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    width: 90%;
+    padding: 20px;
+    font-size: 12px;
+  }
+  main > div {
+    padding: 16px 50px;
+  }
+  .button {
+    margin: 20px 0 10px 0;
+    padding: 5px 10px;
+  }
+  main > div img {
+    width: 50px;
+    height: 30px;
+  }
+  main > div p {
+    margin: 0;
+  }
+  main > div h2 {
+    margin: 15px 0;
+  }
 }
